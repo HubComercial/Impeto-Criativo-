@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Ímpeto Criativo — Posicionamento Digital de Alta Performance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Google tag (gtag.js) – Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YJM3E19H0J"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-YJM3E19H0J');
+  </script>
+  <!-- Fim do código do Google Analytics -->
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #010101;
+      color: #F1F5F9;
+      font-family: 'Inter', sans-serif;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    @media (min-width: 1600px) {
+      .container {
+        max-width: 1500px;
+        padding: 0 48px;
+      }
+    }
+
+    section {
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .bg-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(rgba(0,255,208,0.03) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0,255,208,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(0, 255, 208, 0.12);
+      border: 1px solid rgba(0, 255, 208, 0.3);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: #00FFD0;
+      margin-bottom: 24px;
+      backdrop-filter: blur(4px);
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      background: linear-gradient(135deg, #FFFFFF 20%, #A5F0FF 80%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .section-subhead {
+      font-size: 1.2rem;
+      color: #94A3B8;
+      max-width: 680px;
+      margin-bottom: 48px;
+      border-left: 3px solid #00FFD0;
+      padding-left: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .card-premium {
+      background: rgba(12, 18, 28, 0.75);
+      backdrop-filter: blur(2px);
+      border: 1px solid rgba(48, 62, 77, 0.5);
+      border-radius: 32px;
+      padding: 32px;
+      transition: all 0.4s ease;
+    }
+
+    .card-premium:hover {
+      transform: translateY(-8px);
+      border-color: rgba(0, 255, 208, 0.6);
+      box-shadow: 0 30px 45px -12px rgba(0, 255, 200, 0.2);
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-bg-blur {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 70% 30%, #0A192F, #000000);
+      z-index: -2;
+    }
+
+    .hero-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 28px;
+      background: linear-gradient(115deg, #FFFFFF, #00FFD0, #3B82F6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.25rem;
+      color: #CBD5E1;
+      max-width: 750px;
+      margin: 0 auto 32px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(95deg, #00FFD0, #0A7CFF);
+      border: none;
+      padding: 16px 42px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #010101;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 20px rgba(0, 255, 208, 0.2);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn-primary:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 30px rgba(0, 255, 208, 0.4);
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      border: 1.5px solid rgba(255,255,240,0.3);
+      border-radius: 60px;
+      padding: 14px 32px;
+      font-weight: 500;
+      color: #E2E8F0;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline-light:hover {
+      border-color: #00FFD0;
+      color: #00FFD0;
+    }
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(16px);
+      background: rgba(1, 1, 1, 0.75);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      padding: 18px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1400px;
+      margin: auto;
+      padding: 0 32px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: linear-gradient(125deg, #00FFD0, #3B82F6);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #CBD5E1;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+
+    .nav-links a:hover { color: #00FFD0; }
+
+    .tabs-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+      justify-content: center;
+    }
+
+    .tab-btn {
+      background: rgba(20, 28, 38, 0.8);
+      border: 1px solid #2D3A46;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.2s;
+      color: #CBD5E1;
+    }
+
+    .tab-btn.active {
+      background: #00FFD0;
+      color: #010101;
+      border-color: #00FFD0;
+      box-shadow: 0 0 12px #00FFD0;
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 32px;
+    }
+
+    .price-card {
+      background: #0E121B;
+      border-radius: 32px;
+      padding: 32px 24px;
+      border: 1px solid #232E3C;
+      transition: 0.25s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .price-card.popular {
+      border: 1px solid #00FFD0;
+      box-shadow: 0 0 20px rgba(0,255,208,0.2);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      right: 24px;
+      background: #00FFD0;
+      color: #000;
+      font-weight: bold;
+      padding: 4px 14px;
+      border-radius: 40px;
+      font-size: 0.7rem;
+    }
+
+    .price {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin: 20px 0 16px;
+    }
+
+    .price small { font-size: 1rem; font-weight: 400; }
+
+    .feature-list {
+      list-style: none;
+      margin: 20px 0;
+      flex-grow: 1;
+    }
+
+    .feature-list li {
+      margin: 12px 0;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .feature-list i { color: #00FFD0; width: 20px; }
+
+    .security-seal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      font-size: 0.75rem;
+      color: #94A3B8;
+      border-top: 1px solid #2D3A46;
+      padding-top: 16px;
+    }
+    .security-seal i { color: #00FFD0; font-size: 0.9rem; }
+
+    .testimonial-card {
+      background: rgba(10, 15, 25, 0.7);
+      border-radius: 28px;
+      padding: 32px;
+      border: 1px solid #1E2A36;
+    }
+
+    .faq-item {
+      background: #0A0E15;
+      border-radius: 20px;
+      margin-bottom: 16px;
+      padding: 20px 24px;
+      cursor: pointer;
+    }
+
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.35s;
+      color: #94A3B8;
+      padding-top: 0;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding-top: 16px;
+    }
+
+    footer {
+      border-top: 1px solid rgba(255,255,255,0.05);
+      padding: 48px 0 32px;
+      text-align: center;
+      color: #5B6E8C;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 14px 20px;
+      border-radius: 60px;
+      border: 1px solid #2D3A46;
+      background: #0E1622;
+      color: white;
+      font-family: 'Inter', sans-serif;
+      outline: none;
+    }
+
+    input:focus, select:focus {
+      border-color: #00FFD0;
+      box-shadow: 0 0 0 2px rgba(0,255,208,0.2);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      cursor: pointer;
+      transition: all 0.3s;
+      z-index: 1000;
+      border: none;
+      text-decoration: none;
+    }
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+      background-color: #20b859;
+      box-shadow: 0 0 20px #25D366;
+    }
+
+    .social-proof {
+      position: fixed;
+      bottom: 110px;
+      right: 30px;
+      background: rgba(0,0,0,0.85);
+      backdrop-filter: blur(8px);
+      border-left: 4px solid #00FFD0;
+      border-radius: 12px;
+      padding: 12px 18px;
+      max-width: 280px;
+      font-size: 0.8rem;
+      color: #E2E8F0;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      transition: opacity 0.5s;
+      pointer-events: none;
+    }
+    .social-proof i {
+      color: #00FFD0;
+      margin-right: 8px;
+    }
+
+    .thankyou-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      backdrop-filter: blur(12px);
+      z-index: 2000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: 0.3s;
+    }
+    .thankyou-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .thankyou-card {
+      background: #0E121B;
+      padding: 48px 32px;
+      border-radius: 48px;
+      border: 1px solid #00FFD0;
+      max-width: 500px;
+      margin: 20px;
+    }
+    .thankyou-card i {
+      font-size: 4rem;
+      color: #00FFD0;
+      margin-bottom: 24px;
+    }
+    .close-thankyou {
+      background: #00FFD0;
+      color: #000;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 40px;
+      font-weight: bold;
+      margin-top: 24px;
+      cursor: pointer;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tab-pane { display: none; animation: fadeIn 0.35s ease; }
+    .active-pane { display: block; }
+    @keyframes fadeIn { from { opacity:0; transform: translateY(10px); } to { opacity:1; transform: translateY(0); } }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      h2 { font-size: 2rem; }
+      section { padding: 70px 0; }
+      .container { padding: 0 20px; }
+      .whatsapp-float { width: 50px; height: 50px; font-size: 1.6rem; bottom: 20px; right: 20px; }
+      .social-proof { bottom: 90px; right: 20px; max-width: 240px; font-size: 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">ÍMPETO<span style="color:#00FFD0;">·</span>CRIATIVO</div>
+    <div class="nav-links">
+      <a href="#solucao">Solução</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#cases">Cases</a>
+      <a href="#contato">Contato</a>
+    </div>
+  </div>
+</nav>
+
+<main id="mainContent">
+  <div class="hero">
+    <div class="hero-bg-blur"></div>
+    <div class="bg-grid"></div>
+    <div class="container hero-content">
+      <span class="badge"><i class="fas fa-bolt"></i> Posicionamento que vende</span>
+      <h1>Se o seu negócio não vende online, o problema não é o mercado.<br> É como você aparece.</h1>
+      <p>A maioria das empresas perde clientes porque parece amadora na internet. Eu transformo marcas comuns em máquinas de autoridade e conversão.</p>
+      <div style="display: flex; gap: 18px; justify-content: center; flex-wrap: wrap;">
+        <button class="btn-primary" id="ctaHeroBtn"><i class="fas fa-arrow-right"></i> Quero parecer profissional</button>
+        <button class="btn-outline-light" id="ctaCasesBtn">Ver cases reais →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container fade-up" id="solucao">
+    <div class="bg-grid"></div>
+    <div style="text-align: center;">
+      <span class="badge"><i class="fas fa-chart-line"></i> diagnóstico real</span>
+      <h2>O invisível que destrói resultados</h2>
+      <div class="section-subhead" style="margin: 0 auto 48px;">3 em cada 5 visitantes desistem porque o digital não passa confiança.</div>
+    </div>
+    <div class="grid-3">
+      <div class="card-premium"><i class="fas fa-eye-slash" style="font-size: 2rem; color: #00FFD0; margin-bottom: 20px;"></i><h3>Você é invisível</h3><p>Seu serviço é bom, mas o posicionamento genérico te coloca na prateleira de quem cobra menos.</p></div>
+      <div class="card-premium"><i class="fas fa-instagram" style="font-size: 2rem; color: #00FFD0; margin-bottom: 20px;"></i><h3>Redes sem estratégia</h3><p>Postar por postar não gera negócio. Falta um funil que converta seguidor em cliente.</p></div>
+      <div class="card-premium"><i class="fas fa-code-branch" style="font-size: 2rem; color: #00FFD0; margin-bottom: 20px;"></i><h3>Site que não vende</h3><p>Site institucional é desculpa. Você precisa de uma arquitetura de conversão e copy persuasiva.</p></div>
+    </div>
+  </div>
+
+  <div style="background: radial-gradient(ellipse at 50% 50%, #061220, #010101);" class="fade-up">
+    <div class="container">
+      <div style="text-align: center;">
+        <span class="badge"><i class="fas fa-gem"></i> método ímpeto</span>
+        <h2>A virada de chave: do amador ao premium</h2>
+        <div class="section-subhead" style="margin: 0 auto 48px;">Construímos uma máquina de vendas 24h, não apenas um "design bonito".</div>
+      </div>
+      <div class="grid-3">
+        <div class="card-premium"><i class="fas fa-chart-simple" style="font-size: 2rem; color: #00FFD0;"></i><h3 style="margin-top: 20px;">Estratégia de posicionamento</h3><p>Identificamos sua vantagem única e criamos uma narrativa que atrai clientes certos.</p></div>
+        <div class="card-premium"><i class="fas fa-pen-ruler" style="font-size: 2rem; color: #00FFD0;"></i><h3 style="margin-top: 20px;">Identidade que convence</h3><p>Branding profissional que eleva o valor percebido e gera confiança instantânea.</p></div>
+        <div class="card-premium"><i class="fas fa-rocket" style="font-size: 2rem; color: #00FFD0;"></i><h3 style="margin-top: 20px;">Estrutura de conversão</h3><p>Sites, landing pages e conteúdos desenhados para guiar o lead até o fechamento.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVIÇOS COM PREÇOS E BOTÕES DIRETOS PARA WHATSAPP -->
+  <div class="container fade-up" id="servicos">
+    <div style="text-align: center;">
+      <span class="badge"><i class="fas fa-tags"></i> soluções sob medida</span>
+      <h2>Escolha o pacote ideal</h2>
+      <div class="section-subhead" style="margin: 0 auto 48px;">Clique no botão do pacote desejado e fale diretamente comigo para finalizar o pagamento.</div>
+    </div>
+
+    <div class="tabs-container">
+      <div class="tabs-buttons">
+        <div class="tab-btn active" data-tab="tab-site"><i class="fas fa-globe"></i> Sites que Vendem</div>
+        <div class="tab-btn" data-tab="tab-branding"><i class="fas fa-brush"></i> Branding & Posicionamento</div>
+        <div class="tab-btn" data-tab="tab-social"><i class="fas fa-chart-line"></i> Conteúdo + Redes</div>
+      </div>
+
+      <div id="tab-site" class="tab-pane active-pane">
+        <div class="pricing-grid">
+          <div class="price-card"><h3>Essencial</h3><div class="price">180€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Landing page profissional</li><li><i class="fas fa-check-circle"></i> Design responsivo</li><li><i class="fas fa-check-circle"></i> Copy estratégica</li><li><i class="fas fa-check-circle"></i> Formulário de captura</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Site Essencial - 180€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card popular"><div class="popular-badge">+ escolhido</div><h3>Profissional</h3><div class="price">350€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Site completo (até 5 páginas)</li><li><i class="fas fa-check-circle"></i> UX focado em vendas</li><li><i class="fas fa-check-circle"></i> SEO básico + analytics</li><li><i class="fas fa-check-circle"></i> 2 revisões completas</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Site Profissional - 350€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card"><h3>Elite</h3><div class="price">600€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Site de alta conversão</li><li><i class="fas fa-check-circle"></i> Estratégia de copy avançada</li><li><i class="fas fa-check-circle"></i> Animações e performance premium</li><li><i class="fas fa-check-circle"></i> Consultoria de posicionamento</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Site Elite - 600€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+        </div>
+      </div>
+
+      <div id="tab-branding" class="tab-pane">
+        <div class="pricing-grid">
+          <div class="price-card"><h3>Essencial</h3><div class="price">120€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Logo profissional vetorizada</li><li><i class="fas fa-check-circle"></i> Paleta de cores estratégica</li><li><i class="fas fa-check-circle"></i> Guia rápido</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Branding Essencial - 120€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card popular"><div class="popular-badge">recomendado</div><h3>Profissional</h3><div class="price">280€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Identidade visual completa</li><li><i class="fas fa-check-circle"></i> Brand book + tipografia</li><li><i class="fas fa-check-circle"></i> Aplicações para redes e site</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Branding Profissional - 280€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card"><h3>Elite</h3><div class="price">450€</div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Posicionamento estratégico + naming</li><li><i class="fas fa-check-circle"></i> Branding emocional</li><li><i class="fas fa-check-circle"></i> Arquitetura de comunicação</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Branding Elite - 450€" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+        </div>
+      </div>
+
+      <div id="tab-social" class="tab-pane">
+        <div class="pricing-grid">
+          <div class="price-card"><h3>Essencial</h3><div class="price">140€<small>/mês</small></div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> 8 posts/mês (design + legenda)</li><li><i class="fas fa-check-circle"></i> Calendário editorial</li><li><i class="fas fa-check-circle"></i> Relatório mensal</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Redes Essencial - 140€/mês" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card"><h3>Profissional</h3><div class="price">230€<small>/mês</small></div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> 15 conteúdos exclusivos</li><li><i class="fas fa-check-circle"></i> Estratégia de engajamento</li><li><i class="fas fa-check-circle"></i> Copy conversacional</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Redes Profissional - 230€/mês" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+          <div class="price-card popular"><div class="popular-badge">crescimento</div><h3>Elite</h3><div class="price">380€<small>/mês</small></div><ul class="feature-list"><li><i class="fas fa-check-circle"></i> Gestão completa + stories diários</li><li><i class="fas fa-check-circle"></i> Tráfego pago (orç. à parte)</li><li><i class="fas fa-check-circle"></i> Funil de vendas integrado</li></ul><div class="security-seal"><i class="fas fa-lock"></i> Pagamento 100% seguro</div><button class="btn-primary wpp-buy" data-pacote="Redes Elite - 380€/mês" style="width:100%; background: #00FFD0; color:#000; margin-top: 16px;">👉 Quero este pacote</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cases" class="fade-up" style="background: #03060C;">
+    <div class="container">
+      <div class="bg-grid"></div>
+      <div style="text-align: center;"><span class="badge"><i class="fas fa-medal"></i> resultados reais</span><h2>Projetos que geraram ROI</h2><div class="section-subhead" style="margin: 0 auto 48px;">Transformamos presença digital em faturamento.</div></div>
+      <div class="grid-3">
+        <div class="testimonial-card"><i class="fas fa-chart-line" style="font-size: 2rem; color:#00FFD0;"></i><p style="margin: 20px 0; font-weight: 500;">"Site profissional e branding elevaram meu ticket médio em 62%."</p><h4>— Luiza Mendes, Moda Autoral</h4></div>
+        <div class="testimonial-card"><i class="fas fa-chart-line" style="font-size: 2rem; color:#00FFD0;"></i><p style="margin: 20px 0;">"Com a estratégia de conteúdo + site, minha agenda lotou por 3 meses."</p><h4>— Rafael Torres, Consultoria</h4></div>
+        <div class="testimonial-card"><i class="fas fa-chart-line" style="font-size: 2rem; color:#00FFD0;"></i><p style="margin: 20px 0;">"Deixei de ser 'mais um' e passei a cobrar o que realmente valho."</p><h4>— Camila S., arquitetura</h4></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container fade-up" id="faq">
+    <div style="text-align: center;"><span class="badge"><i class="fas fa-circle-question"></i> Perguntas Frequentes</span><h2>Dúvidas comuns</h2></div>
+    <div style="max-width: 800px; margin: 40px auto 0;">
+      <div class="faq-item"><div class="faq-question">Os valores são recorrentes ou únicos? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sites e Branding são valores únicos. Redes sociais têm recorrência mensal, sem fidelidade.</div></div>
+      <div class="faq-item"><div class="faq-question">Qual o prazo de entrega? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Sites essenciais: 5-7 dias úteis. Branding: até 10 dias.</div></div>
+      <div class="faq-item"><div class="faq-question">Preciso de conhecimentos técnicos? <i class="fas fa-chevron-down"></i></div><div class="faq-answer">Nenhum. Entregamos tudo pronto e te orientamos.</div></div>
+    </div>
+  </div>
+
+  <!-- FORMULÁRIO DE ANÁLISE GRATUITA -->
+  <div id="contato" class="fade-up" style="background: linear-gradient(145deg, #02121f, #000000); margin-top: 30px;">
+    <div class="container" style="text-align: center; max-width: 750px;">
+      <span class="badge"><i class="fas fa-comment-dots"></i> sem compromisso</span>
+      <h2>Não sabe qual pacote escolher?</h2>
+      <p style="margin-bottom: 32px;">Preencha o formulário abaixo e receba uma <strong>análise gratuita</strong> do seu negócio. Eu mesmo vou analisar e te dar uma recomendação personalizada.</p>
+      <form id="leadForm" style="display: flex; flex-direction: column; gap: 18px; max-width: 550px; margin: 0 auto;">
+        <input type="text" id="nome" placeholder="Seu nome completo" required>
+        <input type="email" id="email" placeholder="Melhor e-mail" required>
+        <input type="tel" id="telefone" placeholder="WhatsApp com DDD" required>
+        <select id="servicoInteresse" required>
+          <option value="" disabled selected>– O que você gostaria de melhorar? –</option>
+          <option value="Criação de site ou landing page">🌐 Criação de site ou landing page</option>
+          <option value="Branding e identidade visual">🎨 Branding e identidade visual</option>
+          <option value="Gestão de redes sociais">📱 Gestão de redes sociais</option>
+          <option value="Consultoria (não sei o que preciso)">🎯 Consultoria – quero orientação</option>
+        </select>
+        <button type="submit" class="btn-primary" style="justify-content: center; width: 100%;"><i class="fab fa-whatsapp"></i> Enviar para análise gratuita</button>
+        <p style="font-size: 0.75rem; color:#5B6E8C;">Ao enviar, você autoriza o contato via WhatsApp para tirar dúvidas.</p>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <p>© 2025 Ímpeto Criativo — Estratégia, Design e Performance Digital</p>
+    <div style="margin-top: 20px; display: flex; justify-content: center; gap: 24px;">
+      <i class="fab fa-instagram"></i> <i class="fab fa-linkedin-in"></i> <i class="fab fa-whatsapp"></i>
+    </div>
+  </div>
+</footer>
+
+<!-- Botão flutuante WhatsApp -->
+<a href="#" id="whatsappFloatBtn" class="whatsapp-float" target="_blank">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- Notificação social simulada (12 mensagens aleatórias) -->
+<div id="socialProof" class="social-proof">
+  <i class="fas fa-shopping-cart"></i> <span id="socialMessage">Carregando...</span>
+</div>
+
+<!-- Overlay de obrigado -->
+<div id="thankyouOverlay" class="thankyou-overlay">
+  <div class="thankyou-card">
+    <i class="fas fa-check-circle"></i>
+    <h2>Mensagem enviada com sucesso!</h2>
+    <p style="margin: 20px 0;">Agradecemos o seu contacto. Em breve receberá uma resposta pelo WhatsApp.</p>
+    <button class="close-thankyou" onclick="fecharObrigado()">Continuar no site</button>
+  </div>
+</div>
+
+<script>
+  // ============================================================
+  // CONFIGURADO COM O SEU NÚMERO REAL (PORTUGAL)
+  // ============================================================
+  const SEU_WHATSAPP_NUMERO = "351962146991";
+
+  // 1. Botões de compra direta (todos os pacotes) - com mensagem automática
+  const botoesCompra = document.querySelectorAll('.wpp-buy');
+  botoesCompra.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const pacote = btn.getAttribute('data-pacote');
+      const mensagem = `Olá! Tenho interesse no pacote *${pacote}*. Gostaria de saber como proceder para o pagamento.`;
+      const url = `https://wa.me/${SEU_WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+      window.open(url, '_blank');
+    });
+  });
+
+  // 2. Formulário de análise gratuita - envia nome, email, telefone e serviço
+  const form = document.getElementById('leadForm');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const servico = document.getElementById('servicoInteresse').value;
+
+    if (!nome || !email || !telefone || !servico) {
+      alert("Por favor, preencha todos os campos.");
+      return;
+    }
+
+    const mensagem = `*NOVO LEAD - ANÁLISE GRATUITA*%0A%0A👤 Nome: ${nome}%0A📧 E-mail: ${email}%0A📱 WhatsApp: ${telefone}%0A🎯 Interesse: ${servico}%0A%0A🔔 Gostaria de uma recomendação personalizada.`;
+    const url = `https://wa.me/${SEU_WHATSAPP_NUMERO}?text=${mensagem}`;
+    window.open(url, '_blank');
+    
+    // Exibir página de obrigado
+    document.getElementById('thankyouOverlay').classList.add('active');
+    
+    // Limpar formulário
+    form.reset();
+  });
+
+  // Fechar obrigado
+  window.fecharObrigado = function() {
+    document.getElementById('thankyouOverlay').classList.remove('active');
+  }
+
+  // 3. Botão flutuante do WhatsApp (abre com uma mensagem padrão)
+  const floatBtn = document.getElementById('whatsappFloatBtn');
+  floatBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const mensagem = `Olá! Gostaria de tirar uma dúvida sobre os serviços da Ímpeto Criativo.`;
+    const url = `https://wa.me/${SEU_WHATSAPP_NUMERO}?text=${encodeURIComponent(mensagem)}`;
+    window.open(url, '_blank');
+  });
+
+  // 4. Notificação social simulada - 12 mensagens variadas + aleatória (evita repetição)
+  const mensagens = [
+    "Maria de Lisboa acabou de contratar o pacote Profissional",
+    "João Silva (Porto) comprou Branding Essencial há 10 minutos",
+    "Ana Costa (Braga) fechou o Site Elite agora mesmo",
+    "Pedro R. contratou gestão de redes sociais hoje",
+    "Carolina M. (Faro) escolheu o pacote Site Profissional",
+    "Rafael T. (Coimbra) renovou Branding por mais 6 meses",
+    "Inês L. adquiriu o plano Elite de redes sociais",
+    "Lucas F. (Setúbal) fechou landing page em 2 dias",
+    "Fernanda O. (Aveiro) aumentou vendas com o Site Essencial",
+    "Thiago A. contratou consultoria de posicionamento",
+    "Mais um cliente satisfeito com o pacote Branding Profissional",
+    "Helena S. (Évora) acaba de aprovar o layout do site"
+  ];
+  let ultimoIndice = -1;
+  const socialSpan = document.getElementById('socialMessage');
+  function mudarNotificacao() {
+    let novoIndice;
+    do {
+      novoIndice = Math.floor(Math.random() * mensagens.length);
+    } while (novoIndice === ultimoIndice && mensagens.length > 1);
+    ultimoIndice = novoIndice;
+    socialSpan.textContent = mensagens[novoIndice];
+  }
+  mudarNotificacao();
+  setInterval(mudarNotificacao, 8000);
+
+  // 5. Scroll para contato (botão hero)
+  document.getElementById('ctaHeroBtn')?.addEventListener('click', () => {
+    document.getElementById('contato').scrollIntoView({ behavior: 'smooth' });
+  });
+  document.getElementById('ctaCasesBtn')?.addEventListener('click', () => {
+    document.getElementById('cases').scrollIntoView({ behavior: 'smooth' });
+  });
+
+  // 6. Tabs e animações
+  const tabBtns = document.querySelectorAll('.tab-btn');
+  const panes = {
+    'tab-site': document.getElementById('tab-site'),
+    'tab-branding': document.getElementById('tab-branding'),
+    'tab-social': document.getElementById('tab-social')
+  };
+  function activateTab(tabId) {
+    Object.keys(panes).forEach(id => { panes[id].style.display = 'none'; });
+    panes[tabId].style.display = 'block';
+    tabBtns.forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-tab') === tabId);
+    });
+  }
+  tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => activateTab(btn.getAttribute('data-tab')));
+  });
+  activateTab('tab-site');
+
+  // FAQ
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.querySelector('.faq-question').addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+
+  // Fade-up
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
